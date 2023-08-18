@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useRef, useState} from 'react';
 import './App.css';
+import {addScaleCorrector, delay, motion, useScroll, useSpring, useTransform} from "framer-motion";
+import {useFollowPointer} from "./use-follow-pointer";
+import SectionBehind from "./Components/SectionBehind";
+import Cubes from "./Components/Cubes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [scale, toggleScale] = useState(0);
+    const [scaleButton, toggleScaleButton] = useState(1);
+    const [translateY, toggleTranslateY] = useState(-300);
+    const [translateX, toggleTranslateX] = useState(-300);
+    const [infinite, toggleInfinite] = useState("");
+
+    return (
+        <>
+            {/*<Cubes></Cubes>*/}
+            <SectionBehind></SectionBehind>
+
+        </>
+    )
 }
 
 export default App;
