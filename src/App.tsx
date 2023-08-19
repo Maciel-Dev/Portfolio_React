@@ -1,6 +1,7 @@
 import './App.css';
 import SectionBehind from "./Components/SectionBehind";
 import SectionAboutMe from "./Components/SectionAboutMe";
+import SectionTechnology from "./Components/SectionTechnology";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
             <section className="overflow-hidden">
                 <SectionBehind></SectionBehind>
                 <SectionAboutMe></SectionAboutMe>
+                <SectionTechnology></SectionTechnology>
             </section>
 
         </>

@@ -15,7 +15,7 @@ function SectionBehind() {
                     Currently studying Information Systems on IFES
                 </p>
                 <motion.p className="text-xl text-white font-bold">
-                    4 Years experience
+                    4 Years of experience
                 </motion.p>
             </motion.div>
             {/*<motion.div className="absolute col-start-4 inset-y-0 right-0 row-span-2 origin-right w-28 rounded-2xl" style={{ backgroundColor: "#F2542D" }}>*/}
