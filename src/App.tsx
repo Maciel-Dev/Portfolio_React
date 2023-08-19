@@ -1,12 +1,15 @@
 import './App.css';
 import SectionBehind from "./Components/SectionBehind";
+import SectionAboutMe from "./Components/SectionAboutMe";
 
 function App() {
 
     return (
         <>
-            {/*<Cubes></Cubes>*/}
-            <SectionBehind></SectionBehind>
+            <section className="overflow-hidden">
+                <SectionBehind></SectionBehind>
+                <SectionAboutMe></SectionAboutMe>
+            </section>
 
         </>
     )

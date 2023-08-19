@@ -1,26 +1,37 @@
 import {motion} from "framer-motion";
+import logo from '../Assets/pythonLogo.png'
 
 function SectionBehind() {
 
 
     return (
-        <section className="grid grid-cols-3 grid-rows-3 w-screen h-screen overflow-hidden"
+        <section className="grid grid-cols-4 grid-rows-3 w-screen h-screen overflow-hidden "
                  style={{backgroundColor: "#000411"}}>
-            {/* White Background */}
-            <motion.div className="col-start-3 row-start-1 grid grid-cols-3"
-                        initial={{y: 300, opacity: 0}}
-                        animate={{y: 0, opacity: 1}} transition={{type: "spring", duration: 2, delay: 1.2}}>
-                <div className="bg-white w-20 rounded-3xl text-right h-full col-start-3">
-
-                </div>
+            <motion.div className="col-start-3 col-span-full row-start-2 " initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type:"spring", delay: 3, duration: 1.5 }}>
+                <p className="text-xl text-white">
+                    I Like to develop Web Apps and learn about new technologies daily.
+                </p>
+                <p className="text-xl text-white">
+                    Currently studying Information Systems on IFES
+                </p>
+                <motion.p className="text-xl text-white font-bold">
+                    4 Years experience
+                </motion.p>
             </motion.div>
+            {/*<motion.div className="absolute col-start-4 inset-y-0 right-0 row-span-2 origin-right w-28 rounded-2xl" style={{ backgroundColor: "#F2542D" }}>*/}
 
-            <motion.div className=" conteiner col-start-1 flex row-start-2 ml-4 h-10" style={{display: "inline"}}>
+            {/*</motion.div>*/}
+            <motion.div className="container col-start-1 col-span-2 flex row-start-2 ml-4 h-10"
+                        style={{display: "inline"}}>
                 <motion.h1 className="text-white font-bold text-7xl" style={{color: "#E1EFE6"}}
                            initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}}
                            transition={{type: "spring", duration: 2, delay: 1.2}}>
-                    <p className="truncate">
-                        Hi, I'm <motion.span className="" style={{color: "#EFCB68"}}>JOAO</motion.span>
+                    <p className="inline-flex">
+                        Hi, I'm <motion.span className="" style={{color: "#EFCB68"}}>&nbsp; JOÃO</motion.span>
+                        <motion.p className="origin-center" initial={{rotateZ: 45}} animate={{rotateZ: 0}}
+                                  transition={{repeat: Infinity, repeatType: "mirror", duration: 1, delay: 1}}>
+                            👋
+                        </motion.p>
                     </p>
                 </motion.h1>
                 <motion.p className="text-white font-semibold ml-1 text-4xl" initial={{x: -200, opacity: 0}}
@@ -32,7 +43,7 @@ function SectionBehind() {
                                     whileTap={{color: "white", scale: 0.7}}>
                             <p>
 
-                                Full Stack Developer
+                                Full Stack Developer.
                             </p>
                         </motion.div>
                     </p>
