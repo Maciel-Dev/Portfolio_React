@@ -71,7 +71,7 @@ function SectionBehind() {
             </motion.div>
             <div
                 className="col-start-1 row-start-3 font-bold gap-4 col-span-full grid grid-cols-6 place-items-center text-xl text-white text-center">
-                <motion.p className="rounded-2xl w-full" initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}}
+                <motion.p className="rounded-2xl w-full h-20 flex items-center text-center" initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}}
                           style={{backgroundColor: "#C14B1F"}}
                           transition={{
                               type: "spring",
@@ -82,7 +82,7 @@ function SectionBehind() {
                           }}>
                     Object-oriented programming
                 </motion.p>
-                <motion.p className="rounded-2xl w-full" style={{backgroundColor: "#DD6031"}}
+                <motion.p className="rounded-2xl w-full h-20 flex items-center text-center" style={{backgroundColor: "#DD6031"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -92,7 +92,7 @@ function SectionBehind() {
                 }}>
                     Web Development
                 </motion.p>
-                <motion.p className="rounded-2xl w-full" style={{backgroundColor: "#736372"}}
+                <motion.p className="rounded-2xl w-full h-20 flex items-center" style={{backgroundColor: "#736372"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -102,7 +102,7 @@ function SectionBehind() {
                 }}>
                     Database
                 </motion.p>
-                <motion.p className="rounded-2xl w-full" style={{backgroundColor: "#7D6167"}}
+                <motion.p className="rounded-2xl w-full h-20 flex items-center" style={{backgroundColor: "#7D6167"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -112,7 +112,7 @@ function SectionBehind() {
                 }}>
                     API Construction
                 </motion.p>
-                <motion.p className="rounded-2xl w-full" style={{backgroundColor: "#7D6167"}}
+                <motion.p className="rounded-2xl w-full h-20 flex items-center" style={{backgroundColor: "#7D6167"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -122,7 +122,7 @@ function SectionBehind() {
                 }}>
                     Front-End
                 </motion.p>
-                <motion.p className="rounded-2xl w-full" style={{backgroundColor: "#4C5B5C"}}
+                <motion.p className="rounded-2xl w-full h-20 flex items-center" style={{backgroundColor: "#4C5B5C"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
