@@ -1,49 +1,38 @@
-import {motion, useAnimation} from "framer-motion";
-import logo from '../Assets/pythonLogo.png'
+import {motion} from "framer-motion";
 import github from '../Assets/github.png'
 import linkedin from '../Assets/linkedin-logo-linkedin-icon-transparent-free-png.webp'
-import {Link} from 'react-router-dom';
-import {useInView} from "react-intersection-observer";
 
 function SectionBehind() {
 
     return (
-        <section className="grid grid-cols-3 grid-rows-3 w-screen h-screen overflow-hidden"
+        <section className="grid grid-cols-3 w-screen h-screen overflow-hidden"
                  style={{backgroundColor: "#000411"}}>
-            <motion.div
-                className=" bg-white absolute z-10 end-0 col-start-1 row-start-1 col-span-full h-16 grid grid-cols-3 place-items-center rounded-2xl mr-5 mt-5 gap-1"
-                initial={{scaleY: 0}} animate={{scaleY: 1}} transition={{ease: "easeOut", duration: 2, delay: 1.5}}
-                style={{backgroundColor: ""}}>
-                <motion.a className="bg-white rounded-3xl" href="https://github.com/Maciel-Dev"
-                          initial={{y: -100, opacity: 0}}
-                          animate={{y: 0, opacity: 1}} transition={{delay: 2, type: "spring", duration: 2}}>
-                    <img src={github} className="object-cover w-10" style={{scale: 0.1}} alt="git"/>
-                </motion.a>
-                <motion.a className="rounded-3xl" href="https://github.com/Maciel-Dev" initial={{y: -100, opacity: 0}}
-                          animate={{y: 0, opacity: 1}} transition={{delay: 2.8, type: "spring", duration: 2}}>
-                    <img src={linkedin} className="object-cover w-16" style={{scale: 0.1}} alt="git"/>
-                </motion.a>
-                <motion.a className="bg-white rounded-3xl" href="https://github.com/Maciel-Dev"
-                          initial={{y: -100, opacity: 0}}
-                          animate={{y: 0, opacity: 1}} transition={{delay: 3.6, type: "spring", duration: 2}}>
-                    <img src={github} className="object-cover w-10" style={{scale: 0.1}} alt="git"/>
-                </motion.a>
-            </motion.div>
-            <motion.div className="col-start-3 col-span-full row-start-2 " initial={{scale: 0}} animate={{scale: 1}}
-                        transition={{type: "spring", delay: 3, duration: 1.5}}>
-                <p className="text-xl text-white">
-                    I Like to develop Web Apps and learn about new technologies daily.
-                </p>
-                <p className="text-xl text-white">
-                    Currently studying Information Systems on IFES
-                </p>
-                <motion.p className="text-xl text-white font-bold">
-                    4 Years of experience
-                </motion.p>
-            </motion.div>
-            <motion.div className="container col-start-1 col-span-2 flex row-start-2 ml-4 h-10"
+            <div className="flex justify-center sm:w-64 w-32">
+                <motion.div
+                    className="bg-white z-10 end-0 col-start-2 sm:col-span-full h-16 grid grid-cols-3 place-items-center rounded-2xl mr-5 mt-5 gap-1"
+                    initial={{scaleY: 0}} animate={{scaleY: 1}}
+                    transition={{ease: "easeOut", duration: 2, delay: 1.5}}
+                    style={{backgroundColor: ""}}>
+                    <motion.a className="bg-white rounded-3xl" href="https://github.com/Maciel-Dev"
+                              initial={{y: -100, opacity: 0}}
+                              animate={{y: 0, opacity: 1}} transition={{delay: 2, type: "spring", duration: 2}}>
+                        <img src={github} className="object-cover w-10" style={{scale: 0.1}} alt="git"/>
+                    </motion.a>
+                    <motion.a className="rounded-3xl" href="https://github.com/Maciel-Dev"
+                              initial={{y: -100, opacity: 0}}
+                              animate={{y: 0, opacity: 1}} transition={{delay: 2.8, type: "spring", duration: 2}}>
+                        <img src={linkedin} className="object-cover w-16" style={{scale: 0.1}} alt="git"/>
+                    </motion.a>
+                    <motion.a className="bg-white rounded-3xl" href="https://github.com/Maciel-Dev"
+                              initial={{y: -100, opacity: 0}}
+                              animate={{y: 0, opacity: 1}} transition={{delay: 3.6, type: "spring", duration: 2}}>
+                        <img src={github} className="object-cover w-10" style={{scale: 0.1}} alt="git"/>
+                    </motion.a>
+                </motion.div>
+            </div>
+            <motion.div className="container sm:text-left text-center sm:col-start-1 sm:col-span-2 sm:flex sm:ml-4 col-start-1 col-span-full"
                         style={{display: "inline"}}>
-                <motion.h1 className="text-white font-bold text-7xl" style={{color: "#E1EFE6"}}
+                <motion.h1 className="text-white font-bold sm:text-7xl text-3xl" style={{color: "#E1EFE6"}}
                            initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}}
                            transition={{type: "spring", duration: 2, delay: 1.2}}>
                     <p className="inline-flex">
@@ -54,7 +43,7 @@ function SectionBehind() {
                         </motion.p>
                     </p>
                 </motion.h1>
-                <motion.p className="text-white font-semibold ml-1 text-4xl" initial={{x: -200, opacity: 0}}
+                <motion.p className="text-white font-semibold ml-1 text-xl sm:text-4xl" initial={{x: -200, opacity: 0}}
                           animate={{x: 0, opacity: 1}} transition={{type: "spring", duration: 1, delay: 0.5}}>
                     <p className="font-light">I'm a &nbsp;
                         <motion.div className="cursor-pointer font-bold inline-flex" style={{color: "#EFCB68"}} drag
@@ -69,9 +58,22 @@ function SectionBehind() {
                     </p>
                 </motion.p>
             </motion.div>
+            <motion.div className="sm:col-start-3 sm:text-left text-center col-span-full" initial={{scale: 0}} animate={{scale: 1}}
+                        transition={{type: "spring", delay: 3, duration: 1.5}}>
+                <p className="sm:text-xl text-sm text-white">
+                    I Like to develop Web Apps and learn about new technologies daily.
+                </p>
+                <p className="sm:text-xl text-sm text-white ">
+                    Currently studying Information Systems on IFES
+                </p>
+                <motion.p className="sm:text-xl text-sm text-white font-bold">
+                    4 Years of experience
+                </motion.p>
+            </motion.div>
             <div
-                className="col-start-1 row-start-3 font-bold gap-4 col-span-full grid grid-cols-6 place-items-center text-xl text-white text-center">
-                <motion.p className="rounded-2xl w-full h-20 flex items-center justify-center" initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}}
+                className="col-start-1 font-bold gap-4 col-span-full grid sm:grid-cols-6 grid-cols-3 sm:-translate-y-0 -translate-y-16 place-items-center sm:text-xl text-xs text-white text-center">
+                <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
+                          initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}}
                           style={{backgroundColor: "#C14B1F"}}
                           transition={{
                               type: "spring",
@@ -82,7 +84,8 @@ function SectionBehind() {
                           }}>
                     Object-oriented programming
                 </motion.p>
-                <motion.p className="rounded-2xl w-full h-20 flex items-center justify-center" style={{backgroundColor: "#DD6031"}}
+                <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
+                          style={{backgroundColor: "#DD6031"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -92,7 +95,8 @@ function SectionBehind() {
                 }}>
                     Web Development
                 </motion.p>
-                <motion.p className="rounded-2xl w-full h-20 flex items-center justify-center" style={{backgroundColor: "#736372"}}
+                <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
+                          style={{backgroundColor: "#736372"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -102,7 +106,8 @@ function SectionBehind() {
                 }}>
                     Database
                 </motion.p>
-                <motion.p className="rounded-2xl w-full h-20 flex items-center justify-center" style={{backgroundColor: "#7D6167"}}
+                <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
+                          style={{backgroundColor: "#7D6167"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -112,7 +117,8 @@ function SectionBehind() {
                 }}>
                     API Construction
                 </motion.p>
-                <motion.p className="rounded-2xl w-full h-20 flex items-center justify-center" style={{backgroundColor: "#7D6167"}}
+                <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
+                          style={{backgroundColor: "#7D6167"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,
@@ -122,7 +128,8 @@ function SectionBehind() {
                 }}>
                     Front-End
                 </motion.p>
-                <motion.p className="rounded-2xl w-full h-20 flex items-center justify-center" style={{backgroundColor: "#4C5B5C"}}
+                <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
+                          style={{backgroundColor: "#4C5B5C"}}
                           initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                     type: "spring",
                     duration: 1.5,

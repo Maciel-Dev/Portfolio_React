@@ -1,5 +1,4 @@
-import {inView, motion, useInView} from "framer-motion";
-import {useRef} from "react";
+import {motion} from "framer-motion";
 import logo from '../Assets/pythonLogo.png'
 import logoJava from '../Assets/Java-Logo.png'
 
