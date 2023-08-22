@@ -15,7 +15,7 @@ import postgress from "../../Assets/Postgresql_elephant.svg.png";
 
 function Html() {
     return (
-        <section className="w-screen h-screen grid grid-cols-5 grid-rows-5" style={{backgroundColor: "#000411"}}>
+        <section className="w-screen h-screen grid grid-cols-5 grid-rows-5 overflow-hidden" style={{backgroundColor: "#000411"}}>
             <motion.div className="col-start-3" initial={{ scale: 1 }} animate={{ scale: 0 }} transition={{ duration: 1.7 }}>
                 <h1 className="text-white text-center text-5xl font-bold">
                     Knowledge
