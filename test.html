@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* css para a versão com div e tabela */
+        #externo {
+            width: 10cm;
+            height: 17cm;
+            padding: 1cm;
+            border: 1px solid black;
+            box-sizing: border-box;
+            font-size: 10pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 100%;
+        }
+
+        #interno{
+            border: 3px solid black;
+            box-sizing: border-box;
+            padding: 0 0.2cm;
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            max-width:100%;
+            
+        }
+
+        td div {
+            /* width: 100%; */
+            display: inline-block;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .logo_cell{
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .bold{
+            font-weight: bold;
+        }
+
+        .cell {
+            line-height:0.8cm;
+        }
+
+        .cell2 {
+            line-height:1.6cm;
+        }
+        .barcode {
+            height: 3.3cm;
+        }
+
+        .line {
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* a seguir é css para a versão com grid */
+        .pagina {
+            border: 1px solid black;
+            box-sizing: border-box;
+            width: 10cm;
+            height: 15cm;
+            padding: 1cm;
+        }
+
+        .conteudo {
+            border: 3px solid black;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding: 0 0.2cm;
+            display: grid;
+            grid-template-rows: repeat(10,0.8cm) 1cm 0.8cm 3cm;
+            grid-template-columns: 1.8cm 1.8cm 2.8cm 1cm;
+            grid-template-areas: 
+                "lNivel lNivel vNivel logo"
+                "lFoto lFoto lNome lNome"
+                "vFoto vFoto vNome vNome"
+                "vFoto vFoto vNome vNome"
+                "lDoc lDoc lCPF lCPF"
+                "vDoc vDoc vCPF vCPF"
+                "lVal lVal . ."
+                "vVal1 vVal1 vVal2 vVal2"
+                "lSEP lMotiv lMotiv lMotiv"
+                "vSEP vMotiv vMotiv vMotiv"
+                "lArea lArea vArea ."
+                ". CodBar CodBar ."
+                "codigo CodBar CodBar ."
+            ;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .lNivel, .lFoto, .lNome,
+        .lDoc, .lCPF, .lVal, .lSEP,
+        .lMotiv, .lArea {
+            font-weight: bold;
+            font-size: 10pt;
+            line-height: 0.8cm;
+        }
+        .vNivel, .vFoto, .vNome, 
+        .vDoc, .vCPF, .vVal1, 
+        .vVal2, .vSEP, .vMotiv, 
+        .CodBar, .codigo, .vArea {
+            font-size: 10pt;
+            line-height: 0.8cm;
+        }
+
+
+        .lNivel {
+            grid-area: lNivel;
+        }
+        .lFoto {
+            grid-area: lFoto;
+        }
+        .lNome {
+            grid-area: lNome;
+        }
+        .lDoc {
+            grid-area: lDoc;
+        }
+        .lCPF {
+            grid-area: lCPF;
+        }
+        .lVal {
+            grid-area: lVal;
+        }
+        .lSEP {
+            grid-area: lSEP;
+        }
+        .lMotiv {
+            grid-area: lMotiv;
+        }
+        .lArea {
+            grid-area: lArea;
+        }
+
+        .logo {
+            grid-area: logo;
+        }
+        .logo div {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .vNivel {
+            grid-area: vNivel;
+        }
+        .vFoto {
+            grid-area: vFoto;
+            padding-right: 0.5cm;
+        }
+        .vFoto div {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .vNome {
+            grid-area: vNome;
+            line-height: 0.5cm;
+            border-bottom: 1px solid black;
+        }
+        .vDoc {
+            grid-area: vDoc;
+            border-bottom: 1px solid black;
+            font-size: 8pt;
+        }
+        .vCPF {
+            grid-area: vCPF;
+            border-bottom: 1px solid black;
+            font-size: 8pt;
+        }
+        .vVal1 {
+            grid-area: vVal1;
+            border-bottom: 1px solid black;
+        }
+        .vVal2 {
+            grid-area: vVal2;
+            border-bottom: 1px solid black;
+        }
+        .vSEP {
+            grid-area: vSEP;
+            border-bottom: 1px solid black;
+        }
+        .vMotiv {
+            grid-area: vMotiv;
+            border-bottom: 1px solid black;
+        }
+        .vArea {
+            grid-area: vArea;
+            font-size: 14pt;
+        }
+        .CodBar {
+            grid-area: CodBar;
+        }
+        .codigo {
+            grid-area: codigo;
+            text-align: center;
+            font-size: 14pt;
+        }
+
+        .nivel_1{
+            background-color: rgb(91, 155, 213);
+        }
+
+        .nivel_2{
+            background-color: rgb(112, 173, 71);
+        }
+
+    </style>
+    <div id="externo"> 
+        <div id="interno"> 
+            <table cellspacing="0"> 
+                <tbody> 
+                    <tr> 
+                        <td colspan="2" class=""> 
+                            <div style="width: 3.4cm; " class="bold">
+                                NIVEL DE ACESSO:
+                            </div> 
+                            <div class="cell" style="width: 3.4cm; " >&nbsp; 
+                                </ WC@DCR_NIVEL >
+                            </div> 
+                        </td> 
+                    </tr> 
+                    <tr> 
+                        <td colspan="2" class="cell"> 
+                            <div style="width: 3.2cm; " class="bold">
+                                FOTO:
+                            </div> 
+                            <div style="width: 3cm; " class="bold">
+                                NOME:
+                            </div> 
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="cell2">
+                            <img style="width: 2cm" src="data:image/png;base64,{{ image }}" >
+                        </td> 
+                        <td class="line" style=""> 
+                            <div style="width:3cm; font-weight: 200">
+                                </WC@NOME>
+                            </div>
+                        </td> 
+                    </tr> 
+                    <tr>
+                        <td colspan="2" class="cell">
+                            <div style="width:3.2cm;" class="bold">
+                                DOCUMENTO:
+                            </div>
+                            <div style="width:4cm;" class=""bold"">
+                                CPF:
+                            </div> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="line cell">
+                            <div style="width:3.2cm;">
+                                </WC@DOCUMENTO>
+                            </div> 
+                            <div style="width:4cm;">
+                                </WC@CPF>
+                            </div>
+                        </td> 
+                    </tr> 
+                    <tr> 
+                        <td colspan="2" class="cell"> 
+                            <div style="width:7.4cm;" class="bold">
+                                VALIDADE:
+                            </div>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2" class="line cell"> 
+                            <div style="width:3.2cm;">
+                                </WC@VALIDADE_INICIO>
+                            </div> 
+                            <div style="width:4cm;">
+                                </WC@VALIDADE_FIM>
+                            </div> 
+                        </td> 
+                    </tr> 
+                    <tr>
+                        <td colspan="2" class="cell">
+                            <div style="width:2cm;" class="bold">
+                                SEP:
+                            </div>
+                            <div style="width:5.2cm;" class="bold">
+                                MOTIVACAO:
+                            </div> 
+                        </td> 
+                    </tr> 
+                    <tr>
+                        <td colspan="2" class="line cell">
+                            <div style="width:2cm;">
+                                </WC@NUM_SEP>
+                            </div>
+                            <div style="width:5.2cm;">
+                                </WC@DCR_MOTIVACAO>
+                            </div> 
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td colspan="2" class="cell">
+                            <div style="width:3.4cm;" class="bold">
+                                AREA DE ATUAÇÃO:
+                            </div> 
+                            <div style="width:3.4cm; font-size:14pt;">
+                                </WC@NUM_AREA>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="barcode">
+                            <div style ="width:2cm; font-size:14pt;">  </div>
+                            <img style="width: 2cm" src="data:image/png;base64,{{ barcode }}" >
+                        </td>
+                    </tr>
+                </tbody> 
+            </table> 
+        </div>
+    </div>
+    <div style="page-break-after:always">
+    </div>
+    
+</body>
+</html>
