@@ -41,9 +41,9 @@ function SectionBehind() {
                         </motion.div>
                     </div>
                     <motion.div
-                        className="container sm:text-left text-center sm:col-start-1 sm:col-span-2 sm:flex sm:ml-4 col-start-1 col-span-full"
+                        className=" sm:translate-y-16 translate-y-16 text-center sm:col-start-1 sm:row-start-2 sm:flex sm:ml-4 col-start-1 col-span-full"
                         style={{display: "inline"}}>
-                        <motion.h1 className="text-white font-bold sm:text-7xl text-3xl" style={{color: "#E1EFE6"}}
+                        <motion.h1 className="text-white font-bold sm:text-9xl text-5xl" style={{color: "#E1EFE6"}}
                                    initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}}
                                    transition={{type: "spring", duration: 2, delay: 1.2}}>
                             <p className="inline-flex">
@@ -71,7 +71,7 @@ function SectionBehind() {
                             </p>
                         </motion.p>
                     </motion.div>
-                    <motion.div className="sm:col-start-3 sm:text-left text-center col-span-full" initial={{scale: 0}}
+                    <motion.div className="sm:col-start-1 sm:row-start-3 text-center col-span-full" initial={{scale: 0}}
                                 animate={{scale: 1}}
                                 transition={{type: "spring", delay: 3, duration: 1.5}}>
                         <p className="sm:text-xl text-sm text-white">
@@ -84,11 +84,14 @@ function SectionBehind() {
                             4 Years of experience
                         </motion.p>
                     </motion.div>
-                    <div
-                        className="col-start-1 font-bold gap-4 col-span-full grid sm:grid-cols-6 grid-cols-3 sm:-translate-y-0 -translate-y-16 place-items-center sm:text-xl text-xs text-white text-center">
+                    <motion.div
+                        className="col-start-1 font-bold gap-4 col-span-full grid sm:grid-cols-6 grid-cols-3 sm:-translate-y-0 -translate-y-16 place-items-center sm:text-xl text-xs text-white text-center p-9"
+                        initial={{ opacity:0 }}
+                        whileInView={{opacity: 1}} transition={{type: "spring", duration: 3}}
+                        viewport={{once: false, amount: 0.4}}>
                         <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}}
-                                  style={{backgroundColor: "#C14B1F"}}
+                                  style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   transition={{
                                       type: "spring",
                                       duration: 1.5,
@@ -99,7 +102,7 @@ function SectionBehind() {
                             Object-oriented programming
                         </motion.p>
                         <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
-                                  style={{backgroundColor: "#DD6031"}}
+                                  style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
                             duration: 1.5,
@@ -110,7 +113,7 @@ function SectionBehind() {
                             Web Development
                         </motion.p>
                         <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
-                                  style={{backgroundColor: "#736372"}}
+                                  style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
                             duration: 1.5,
@@ -121,7 +124,7 @@ function SectionBehind() {
                             Database
                         </motion.p>
                         <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
-                                  style={{backgroundColor: "#7D6167"}}
+                                  style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
                             duration: 1.5,
@@ -132,7 +135,7 @@ function SectionBehind() {
                             API Construction
                         </motion.p>
                         <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
-                                  style={{backgroundColor: "#7D6167"}}
+                                  style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
                             duration: 1.5,
@@ -143,7 +146,7 @@ function SectionBehind() {
                             Front-End
                         </motion.p>
                         <motion.p className="rounded-2xl w-full sm:h-20 h-10 flex items-center justify-center"
-                                  style={{backgroundColor: "#4C5B5C"}}
+                                  style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
                             duration: 1.5,
@@ -153,7 +156,7 @@ function SectionBehind() {
                         }}>
                             Back-End
                         </motion.p>
-                    </div>
+                    </motion.div>
                 </section>
                 <SectionAboutMe></SectionAboutMe>
                 <SectionTechnology></SectionTechnology>

@@ -31,7 +31,7 @@ function SectionAboutMe() {
                                 viewport={{once: false, amount: 0.4}}>
                     </motion.img>
                 </div>
-                <motion.p className="col-start-1 col-span-full row-start-2 sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:ml-10 text-sm sm:text-lg sm:-translate-y-14 text-white sm:mr-10"
+                <motion.p className="col-start-1 col-span-full row-start-2 sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:ml-10 text-sm sm:text-lg sm:-translate-y-14 text-white sm:mr-10 p-9"
                           initial={{opacity: 0}}
                           whileInView={{opacity: 1}} transition={{type: "spring", duration: 2}}
                           viewport={{once: false, amount: 0.5}}>
