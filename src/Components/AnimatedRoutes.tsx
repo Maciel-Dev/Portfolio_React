@@ -13,6 +13,7 @@ import Sql from "./Pages/Sql";
 import Tailwind from "./Pages/Tailwind";
 import Vue from "./Pages/Vue";
 import Java from "./Pages/Java";
+import Django from "./Pages/Django";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -28,6 +29,7 @@ function AnimatedRoutes() {
                 <Route path="/react" element={<ReactC />} />
                 <Route path="/spring" element={<Spring />} />
                 <Route path="/sql" element={<Sql />} />
+                <Route path="/django" element={<Django />} />
                 <Route path="/tailwind" element={<Tailwind />} />
                 <Route path="/vue" element={<Vue />} />
                 <Route path="/css" element={<Css />} />

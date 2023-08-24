@@ -29,4 +29,4 @@ function Sql() {
     );
 }
 
-export default sql;
+export default Sql;
