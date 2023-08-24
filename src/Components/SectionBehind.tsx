@@ -41,7 +41,7 @@ function SectionBehind() {
                         </motion.div>
                     </div>
                     <motion.div
-                        className=" sm:translate-y-16 translate-y-16 text-center sm:col-start-1 sm:row-start-2 sm:flex sm:ml-4 col-start-1 col-span-full"
+                        className=" sm:translate-y-16 lg:translate-y-8 translate-y-16 text-center sm:col-start-1 sm:row-start-2 sm:flex sm:ml-4 col-start-1 col-span-full"
                         style={{display: "inline"}}>
                         <motion.h1 className="text-white font-bold sm:text-9xl text-5xl" style={{color: "#E1EFE6"}}
                                    initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}}
