@@ -94,7 +94,7 @@ function SectionTechnology() {
                         </motion.img>
                     </motion.div>
                 </Link>
-                <Link to="/postgress" className="flex">
+                <Link to="/react" className="flex">
                     <motion.div className="flex items-center justify-center bg-white rounded-3xl cursor-pointer"
                                 initial={{scale: 0, y: 200}}
                                 transition={{type: "spring", duration: 1, delay: 0.08}}
