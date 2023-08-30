@@ -30,14 +30,14 @@ function SectionTechnology() {
                 className="row-start-2 row-end-5 col-span-full grid grid-rows-4 sm:grid-rows-2 sm:grid-cols-6 grid-cols-3 sm:gap-16 gap-3 p-9"
                 exit={{opacity: 0, y: 500}}
                 transition={{ type:"spring", duration: 0.8 }}>
-                <Link to="/Html" className="flex">
+                <Link to="/Csharp" className="flex">
                     <motion.div className="flex items-center justify-center bg-white rounded-3xl cursor-pointer"
                                 initial={{scale: 0, y: 200}}
                                 transition={{type: "spring", duration: 1, delay: 0}}
                                 whileInView={{scale: 1, y: 0}}
                                 viewport={{once: false, amount: 0.4}}
                                 whileHover={{scale: 1.2, transition: {duration: 1, delay: 0.2, type: "spring"}}}>
-                        <motion.img className="" src={html} alt="rt"
+                        <motion.img className="" src={csharp} alt="rt"
                                     initial={{scale: 0, rotateZ: 180}}
                                     whileHover={{scale: 0.6, transition: {duration: 1, delay: 0.2, type: "spring"}}}
                                     whileInView={{scale: 0.5, rotateZ: 0}}

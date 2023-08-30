@@ -1,6 +1,4 @@
 import {motion} from "framer-motion";
-import logo from '../Assets/pythonLogo.png'
-import logoJava from '../Assets/Java-Logo.png'
 
 function SectionAboutMe() {
 
@@ -8,40 +6,40 @@ function SectionAboutMe() {
         <section className="overflow-hidden">
             <div className="w-screen h-screen overflow-hidden grid grid-cols-3 grid-rows-3"
                  style={{backgroundColor: "#000411"}}>
-                <div className="col-start-2">
-                    <motion.h1 className="col-start-2 row-start-1 text-center text-white text-2xl sm:text-5xl font-bold" initial={{scale: 0}}
+                <div className="col-start-1 row-start-1 col-span-full">
+                    <motion.h1 className="text-center text-white text-2xl sm:text-5xl font-bold" initial={{scale: 0}}
                                whileInView={{scale: 1}} transition={{type: "spring", duration: 1.5}}
                                viewport={{once: false, amount: 0.5}}>
                         About Me
                     </motion.h1>
                 </div>
-                <div className="col-start-1 row-start-1 sm:translate-y-0 translate-y-36">
-                    <motion.img className="" src={logo} alt="rt"
-                                whileHover={{scale: 0.6}}
-                                initial={{scale: 0, rotateZ: 180}}
-                                whileInView={{scale: 0.5, rotateZ: 0}} transition={{type: "spring", duration: 3}}
-                                viewport={{once: false, amount: 0.4}}>
-                    </motion.img>
-                </div>
-                <div className="sm:col-start-3 sm:row-start-2 col-start-3 row-start-1 sm:translate-y-0 translate-y-40">
-                    <motion.img className="" src={logoJava} alt="rt"
-                                whileHover={{scale: 1}}
-                                initial={{scale: 0, rotateZ: 180}}
-                                whileInView={{scale: 0.7, rotateZ: 0}} transition={{type: "spring", duration: 3, delay: 1}}
-                                viewport={{once: false, amount: 0.4}}>
-                    </motion.img>
-                </div>
-                <motion.p className="col-start-1 col-span-full row-start-2 sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:ml-10 text-sm sm:text-lg sm:-translate-y-14 text-white sm:mr-10 p-9"
-                          initial={{opacity: 0}}
-                          whileInView={{opacity: 1}} transition={{type: "spring", duration: 2}}
-                          viewport={{once: false, amount: 0.5}}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </motion.p>
+                {/*<div*/}
+                {/*    className="col-start-1 row-start-2 col-span-full flex items-center justify-center -translate-y-36 scale-75 sm:scale-100 ">*/}
+                {/*    <motion.img className="" src={my_picture} alt="rt"*/}
+                {/*                whileHover={{scale: 0.9}}*/}
+                {/*                initial={{scale: 0, opacity: 0}}*/}
+                {/*                whileInView={{scale: 0.8, opacity: 1}} transition={{type: "spring", duration: 3}}*/}
+                {/*                viewport={{once: false, amount: 0.4}}>*/}
+                {/*    </motion.img>*/}
+                {/*</div>*/}
+                <motion.div
+                    className="col-start-1 col-span-full sm:col-start-1 text-center sm:row-start-2 sm:ml-10 text-sm sm:text-lg sm:-translate-y-14 text-white sm:mr-10 p-9"
+                    initial={{opacity: 0, y: -100}}
+                    whileInView={{opacity: 1, y: 0}} transition={{type: "spring", duration: 2}}
+                    viewport={{once: false, amount: 0.5}}>
+                    <motion.p>
+                        I'm a passionate and wanderer by the paths of programming and technology.
+                    </motion.p>
+                    <motion.p>
+                        I have experience in the field of development, working individually, and with a team, always learning and discovering new subjects and ways of programming.
+                    </motion.p>
+                    <motion.p>
+                        A passion for Java, more specifically, with SpringBoot, was the moment when my path for Web Development was created, and a lot of knowledge was obtained.
+                    </motion.p>
+                    <motion.p>
+                        But, besides I love Technology, I like to think in new ways to innovate everyday, even if it doesn't have some relation with coding.
+                    </motion.p>
+                </motion.div>
             </div>
         </section>
     )

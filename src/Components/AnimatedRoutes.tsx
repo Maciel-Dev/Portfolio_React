@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes, useLocation} from "react-router-dom";
 import SectionBehind from "./SectionBehind";
 import {AnimatePresence} from "framer-motion";
-import Html from "./Pages/Html";
+import Csharp from "./Pages/Csharp";
 import Css from "./Pages/Css";
 import Js from "./Pages/Js";
 import Postgres from "./Pages/Postgres";
@@ -21,7 +21,7 @@ function AnimatedRoutes() {
     return (
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                <Route path="/html" element={<Html />} />
+                <Route path="/csharp" element={<Csharp />} />
                 <Route path="/js" element={<Js />} />
                 <Route path="/postgress" element={<Postgres />} />
                 <Route path="/java" element={<Java />} />

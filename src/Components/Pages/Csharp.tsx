@@ -1,10 +1,10 @@
 import {motion} from 'framer-motion';
 import React from 'react';
-import html from "../../Assets/HTML5_logo_and_wordmark.svg.png";
+import csharp from "../../Assets/c-sharp-c-logo-02F17714BA-seeklogo.com.png";
 import {Link} from "react-router-dom";
 
 
-function Html() {
+function Csharp() {
     return (
         <section className="w-screen h-screen grid grid-cols-5 grid-rows-4 overflow-hidden"
                  style={{backgroundColor: "#000411"}}>
@@ -17,7 +17,7 @@ function Html() {
                             viewport={{once: false, amount: 0.4}}
                             whileHover={{scale: 1.3, rotateZ: 0, transition: {duration: 1, delay: 0.2, type: "spring"}}}
                             style={{}}>
-                    <motion.img className="" src={html} alt="rt"
+                    <motion.img className="" src={csharp} alt="rt"
                                 initial={{scale: 0, rotateZ: 180}}
                                 whileHover={{
                                     scale: 0.5,
@@ -32,19 +32,21 @@ function Html() {
             </Link>
             <motion.div className="col-start-1 row-start-4 w-screen grid grid-cols-3 p-9 gap-10">
                 <motion.div className="bg-white rounded-3xl text-center flex items-center justify-center"
-                            initial={{opacity: 0, x:-600}} animate={{opacity: 1, x:0}} transition={{type: "spring", duration: 1.5}}>
+                            initial={{opacity: 0, x:-600}} animate={{opacity: 1, x:0}} transition={{type: "spring", duration: 1.5, delay:0}}>
                     <h1 className="font-bold text-4xl">
-                        DOM
+                        .Net
                     </h1>
                 </motion.div>
-                <motion.div className="bg-white rounded-3xl text-center flex items-center justify-center">
+                <motion.div className="bg-white rounded-3xl text-center flex items-center justify-center"
+                            initial={{opacity: 0, x:-600}} animate={{opacity: 1, x:0}} transition={{type: "spring", duration: 1.5, delay:0.5}}>
                     <h1 className="font-bold text-4xl">
-                        FORMS
+                        ASP
                     </h1>
                 </motion.div>
-                <motion.div className="bg-white rounded-3xl text-center flex items-center justify-center">
+                <motion.div className="bg-white rounded-3xl text-center flex items-center justify-center"
+                            initial={{opacity: 0, x:-600}} animate={{opacity: 1, x:0}} transition={{type: "spring", duration: 1.5, delay:1}}>
                     <h1 className="font-bold text-4xl">
-                        MARKUP
+                        Rest
                     </h1>
                 </motion.div>
             </motion.div>
@@ -52,4 +54,4 @@ function Html() {
     );
 }
 
-export default Html;
+export default Csharp;

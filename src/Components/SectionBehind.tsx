@@ -14,7 +14,7 @@ function SectionBehind() {
                          style={{backgroundColor: "#000411"}}>
                     <div className="flex justify-center w-screen">
                         <motion.div
-                            className="sm:w-48 w-36 z-10 end-0 col-start-2 col-span-full h-12 sm:h-16 grid grid-cols-3 place-items-center rounded-2xl mr-5 mt-5 gap-1"
+                            className="sm:w-48 w-36 z-10 end-0 col-start-2 col-span-full h-12 sm:h-16 grid grid-cols-2 place-items-center rounded-2xl mr-5 mt-5 gap-1"
                             initial={{scaleY: 0}} animate={{scaleY: 1}}
                             transition={{ease: "easeOut", duration: 2, delay: 1.5}}
                             style={{backgroundColor: "#E1EFE6"}}>
@@ -24,18 +24,11 @@ function SectionBehind() {
                                 <img src={github} className="object-cover sm:w-10 w-8 sm:translate-y-0 -translate-y-1"
                                      style={{scale: 0.1}} alt="git"/>
                             </motion.a>
-                            <motion.a className="rounded-3xl w-14" href="https://github.com/Maciel-Dev"
+                            <motion.a className="rounded-3xl sm:w-16 w-14" href="https://www.linkedin.com/in/jo%C3%A3o-vitor-maciel-vianna/"
                                       initial={{y: -100, opacity: 0}}
                                       animate={{y: 0, opacity: 1}}
                                       transition={{delay: 2.8, type: "spring", duration: 2}}>
                                 <img src={linkedin} className="object-cover sm:w-16 sm:translate-y-0 -translate-y-1"
-                                     style={{scale: 0.1}} alt="git"/>
-                            </motion.a>
-                            <motion.a className="bg-white rounded-3xl" href="https://github.com/Maciel-Dev"
-                                      initial={{y: -100, opacity: 0}}
-                                      animate={{y: 0, opacity: 1}}
-                                      transition={{delay: 3.6, type: "spring", duration: 2}}>
-                                <img src={github} className="object-cover sm:w-10 w-8 sm:translate-y-0 -translate-y-1"
                                      style={{scale: 0.1}} alt="git"/>
                             </motion.a>
                         </motion.div>
@@ -94,7 +87,7 @@ function SectionBehind() {
                                   style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   transition={{
                                       type: "spring",
-                                      duration: 1.5,
+                                      duration: 4,
                                       repeat: Infinity,
                                       repeatType: "mirror",
                                       delay: 1.3
@@ -105,7 +98,7 @@ function SectionBehind() {
                                   style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
-                            duration: 1.5,
+                            duration: 4,
                             repeat: Infinity,
                             repeatType: "mirror",
                             delay: 2
@@ -116,7 +109,7 @@ function SectionBehind() {
                                   style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
-                            duration: 1.5,
+                            duration: 4,
                             repeat: Infinity,
                             repeatType: "mirror",
                             delay: 2.7
@@ -127,7 +120,7 @@ function SectionBehind() {
                                   style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
-                            duration: 1.5,
+                            duration: 4,
                             repeat: Infinity,
                             repeatType: "mirror",
                             delay: 3.4
@@ -138,7 +131,7 @@ function SectionBehind() {
                                   style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
-                            duration: 1.5,
+                            duration: 4,
                             repeat: Infinity,
                             repeatType: "mirror",
                             delay: 4.1
@@ -149,7 +142,7 @@ function SectionBehind() {
                                   style={{backgroundColor: "#E1EFE6", color:"#160C28"}}
                                   initial={{opacity: 0, y: 60}} animate={{opacity: 1, y: 0}} transition={{
                             type: "spring",
-                            duration: 1.5,
+                            duration: 4,
                             repeat: Infinity,
                             repeatType: "mirror",
                             delay: 4.8
