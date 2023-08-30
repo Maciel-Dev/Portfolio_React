@@ -23,7 +23,7 @@ function SectionAboutMe() {
                 {/*    </motion.img>*/}
                 {/*</div>*/}
                 <motion.div
-                    className="col-start-1 col-span-full sm:col-start-1 text-center sm:row-start-2 sm:ml-10 text-sm sm:text-lg sm:-translate-y-14 text-white sm:mr-10 p-9"
+                    className="col-start-1 col-span-full row-start-1 sm:col-start-1 text-center sm:row-start-2 sm:ml-10 text-sm sm:text-lg sm:-translate-y-14 text-white sm:mr-10 p-9"
                     initial={{opacity: 0, y: -100}}
                     whileInView={{opacity: 1, y: 0}} transition={{type: "spring", duration: 2}}
                     viewport={{once: false, amount: 0.5}}>

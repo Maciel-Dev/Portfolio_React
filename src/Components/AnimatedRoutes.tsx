@@ -14,6 +14,8 @@ import Tailwind from "./Pages/Tailwind";
 import Vue from "./Pages/Vue";
 import Java from "./Pages/Java";
 import Django from "./Pages/Django";
+import Editor from "./Editor";
+import EditorNew from "./Editor";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -33,6 +35,7 @@ function AnimatedRoutes() {
                 <Route path="/tailwind" element={<Tailwind />} />
                 <Route path="/vue" element={<Vue />} />
                 <Route path="/css" element={<Css />} />
+                <Route path="/editor" element={<EditorNew onChange={undefined} language={undefined} code={undefined} theme={undefined} />} />
                 <Route path="/" element={<SectionBehind />} />
             </Routes>
         </AnimatePresence>
