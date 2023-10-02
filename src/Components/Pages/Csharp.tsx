@@ -1,4 +1,4 @@
-import {motion} from 'framer-motion';
+import {easeInOut, motion} from 'framer-motion';
 import React from 'react';
 import csharp from "../../Assets/c-sharp-c-logo-02F17714BA-seeklogo.com.png";
 import {Link} from "react-router-dom";
@@ -6,9 +6,12 @@ import MonacoEditor from 'react-monaco-editor';
 import CodeEditorWindow from "../Editor";
 import EditorNew from "../Editor";
 import {defineTheme} from "../../lib/defineThemes";
+import Nameheader from "../Nameheader";
 
 
 function Csharp() {
+
+    let nome = "CSharp ".repeat(100)
 
     return (
         <>
@@ -41,9 +44,10 @@ function Csharp() {
                         </motion.img>
                     </motion.div>
                 </Link>
-                <motion.div className="col-start-1 row-start-4 col-span-full">
-                    <EditorNew onChange={undefined} language={undefined} code={undefined} theme={defineTheme("blackboard")}/>
-                </motion.div>
+                <Nameheader language={"Csharp "}></Nameheader>
+                {/*<motion.div className="col-start-1 row-start-4 col-span-full">*/}
+                {/*    <EditorNew onChange={undefined} language={undefined} code={undefined} theme={defineTheme("blackboard")}/>*/}
+                {/*</motion.div>*/}
 
                 {/*<motion.div className="col-start-1 row-start-4 w-screen grid grid-cols-3 p-9 gap-10">*/}
                 {/*    <motion.div className="bg-white rounded-3xl text-center flex items-center justify-center"*/}
